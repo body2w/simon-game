@@ -7,7 +7,7 @@ var started = false;
 $(".btn").click(function () {
   var userChoosenColor = this.getAttribute("id");
   userClickedPattern.push(userChoosenColor);
-  new Audio("/sounds/" + userChoosenColor + ".mp3").play();
+  new Audio("./sounds/" + userChoosenColor + ".mp3").play();
   $("#" + userChoosenColor)
     .fadeOut(100)
     .fadeIn(100);
@@ -41,7 +41,7 @@ function checkAnswer(currentLevel) {
   } else {
     console.log("wrong");
     document.querySelector("body").setAttribute("class", "game-over");
-    new Audio("/sounds/wrong.mp3").play();
+    new Audio("./sounds/wrong.mp3").play();
     setTimeout(function () {
       document.querySelector("body").removeAttribute("class", "game-over");
     }, 500);
