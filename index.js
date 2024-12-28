@@ -41,7 +41,7 @@ function checkAnswer(currentLevel) {
   } else {
     console.log("wrong");
     document.querySelector("h1").textContent =
-      "Game Over, Press Any Key OR Me to Restart";
+      "Game Over, Press Any Key OR Click Me to Restart";
     document.querySelector("body").setAttribute("class", "game-over");
     new Audio("./sounds/wrong.mp3").play();
     setTimeout(function () {

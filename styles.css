@@ -13,7 +13,7 @@ body {
 
 .container {
   display: block;
-  width: 50%;
+  width: 90%;
   margin: auto;
 }
 
@@ -50,4 +50,16 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+@media (max-width: 1124px) {
+  .btn {
+    height: 190px;
+    width: 190px;
+    margin: 2px;
+  }
+  #level-title {
+    font-size: 2rem;
+    max-width: 500px;
+    margin: 30px auto;
+  }
 }
