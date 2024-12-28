@@ -8,6 +8,7 @@ body {
   font-size: 3rem;
   margin: 5%;
   color: #fef2bf;
+  line-height: 70px;
 }
 
 .container {
@@ -49,21 +50,4 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
-}
-button {
-  display: none;
-}
-@media (max-width: 1400px) {
-  button {
-    display: block;
-    text-align: center;
-    padding: 20px;
-    background-color: green;
-    border-radius: 10px;
-  }
-  .btn-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }

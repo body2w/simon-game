@@ -16,14 +16,14 @@ $(".btn").click(function () {
 
 $(document).keypress(function () {
   if (!started) {
-    $("#level-title").text("Level " + level);
+    $("h1").text("Level " + level);
     nextSequence();
     started = true;
   }
 });
-$(document).click(function () {
+$("h1").click(function () {
   if (!started) {
-    $("#level-title").text("Level " + level);
+    $("h1").text("Level " + level);
     nextSequence();
     started = true;
   }
@@ -33,19 +33,20 @@ function checkAnswer(currentLevel) {
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
     console.log("success");
 
-    if (userClickedPattern.length === gamePattern.length) {
+    if (gamePattern.length === userClickedPattern.length) {
       setTimeout(function () {
         nextSequence();
       }, 1000);
     }
   } else {
     console.log("wrong");
+    document.querySelector("h1").textContent =
+      "Game Over, Press Any Key OR Me to Restart";
     document.querySelector("body").setAttribute("class", "game-over");
     new Audio("./sounds/wrong.mp3").play();
     setTimeout(function () {
       document.querySelector("body").removeAttribute("class", "game-over");
-    }, 500);
-    document.querySelector("h1").textContent = "Game Over, Press Any Key to Restart";
+    }, 1000);
     startOver();
   }
 }
